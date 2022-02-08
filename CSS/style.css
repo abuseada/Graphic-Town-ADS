@@ -3,12 +3,14 @@
     --main-color: #EC294C;
     --sec-color: #19191A;
     --font-color: #e4f0fb;
-    --main-transtation: 0.5s ease;
-    --sec-transtation: 0.7s ease;
+    --main-transtation: 0.4s ease-in-out;
+    --sec-transtation: 0.5s ease-in-out;
 }
+
 /* End Varlables */
 
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 
 /* Start Scroll Bar */
 
@@ -38,7 +40,7 @@
 }
 
 body {
-    font-family: 'Tajawal', sans-serif;
+    font-family: 'Baloo Bhaijaan 2', cursive;
 }
 
 html {
@@ -65,10 +67,10 @@ header {
 }
 
 .logo img {
-    transform: translate(0%, 0%);
+    align-items: center;
+    display: flex;
     width: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 /* End Header */
@@ -96,12 +98,14 @@ h2 {
     color: var(--sec-color);
     font-weight: 700;
     font-size: 38px;
+    margin-top: -20px;
 }
 
 p.prag {
     color: var(--sec-color);
-    font-weight: 600;
-    font-size: 18px;
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: -5px;
 }
 
 .services {
@@ -120,6 +124,15 @@ p.prag {
     border-radius: 10px;
     padding: 25px;
     margin: 15px;
+    background-color: rgba(255, 255, 255, 0.356);
+    transition: var(--main-transtation);
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.15);
+    background-color: var(--font-color);
+    box-shadow: 0 5px 30px rgba(1, 1, 1, 0.050);
 }
 
 .icon img {
@@ -127,6 +140,7 @@ p.prag {
 }
 
 .info h2 {
+    margin-top: 2px;
     font-size: 24px;
     font-weight: 800;
     color: var(--main-color);
@@ -136,9 +150,25 @@ p.prag {
     font-size: 22px;
     font-weight: 700;
     color: var(--sec-color);
+    margin-bottom: 10px;
 }
 
-/* for desktop */
+.btn {
+    color: var(--main-color);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 30px;
+    border-radius: 25px;
+    background-color: var(--font-color);
+    transition: var(--sec-transtation);
+}
+
+.btn:hover {
+    color: var(--font-color);
+    background-color: var(--main-color);
+}
+
+/*============== Start Social Media Icons ============== */
 
 .whatsapp_float {
 	position:fixed;
@@ -151,7 +181,6 @@ p.prag {
 	border-radius:50px;
 	text-align:center;
     font-size:30px;
-	/* box-shadow: 2px 2px 3px #999; */
     z-index:100;
 }
 .phone_float {
@@ -165,10 +194,8 @@ p.prag {
 	border-radius:50px;
 	text-align:center;
     font-size:30px;
-	/* box-shadow: 2px 2px 3px #999; */
     z-index:100;
 }
-
 .massenger_float {
 	position:fixed;
 	width:60px;
@@ -180,49 +207,40 @@ p.prag {
 	border-radius:50px;
 	text-align:center;
     font-size:30px;
-	/* box-shadow: 2px 2px 3px #999; */
     z-index:100;
 }
+.icon-z {
+	margin-top:15px;
+}
 
-.phone-icon {
-	margin-top:15px;
-}
-.whatsapp-icon {
-	margin-top:15px;
-}
-.messenger-icon {
-	margin-top:15px;
-}
 /* for mobile */
 @media screen and (max-width: 767px){
-    .whatsapp-icon {
-	    margin-top: 10px;
-    }
-    .messenger-icon {
+    .icon-z {
 	    margin-top: 10px;
     }
     .whatsapp_float {
         width: 40px;
         height: 40px;
         bottom: 20px;
-        right: 10px;
+        left: 10px;
         font-size: 22px;
     }
     .massenger_float {
         width: 40px;
         height: 40px;
         bottom: 20px;
-        left: 10px;
+        right: 10px;
         font-size: 22px;
     }
     .phone_float {
         width: 40px;
         height: 40px;
-        bottom: 20px;
+        bottom: 70px;
         right: 10px;
         font-size: 22px;
     }
 }
+/*============== End Social Media Icons ============== */
 
 /* End Landing */
 
@@ -242,7 +260,6 @@ p.prag {
     }
     
     p.prag {
-
         font-size: 18px;
     }
 }
